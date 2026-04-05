@@ -1,0 +1,24 @@
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://ep-fancy-mouse-anz0ibzr-pooler.c-6.us-east-1.aws.neon.tech/neondb?sslmode=require
+    username: neondb_owner
+    password: npg_gQpmBju7GI2W
+  sql:
+    init:
+      mode: always
+
+server:
+  port: 8080
+
+rapidapi:
+  key: 2c7f8b9dd0msh4e3eafe659dd865p147ecejsn9c1f3b9c32df
+
+copilot:
+  api:
+    url: https://copilot5.p.rapidapi.com/copilot
+    host: copilot5.p.rapidapi.com
+
+gemini:
+  api:
+    url: https://gemini-pro-ai.p.rapidapi.com/
+    host: gemini-pro-ai.p.rapidapi.com
