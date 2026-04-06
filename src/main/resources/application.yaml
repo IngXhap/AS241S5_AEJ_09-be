@@ -1,14 +1,13 @@
-spring:
-  r2dbc:
-    url: r2dbc:postgresql://ep-fancy-mouse-anz0ibzr-pooler.c-6.us-east-1.aws.neon.tech/neondb?sslmode=require
-    username: neondb_owner
-    password: npg_gQpmBju7GI2W
-  sql:
-    init:
-      mode: always
-
 server:
   port: 8080
+
+spring:
+  application:
+    name: as241s5-aej-09-be
+  data:
+    mongodb:
+      database: as241s5_db
+      uri: mongodb+srv://robertoespinozan_db_user:GitXhap123486@cluster0.pzbjttw.mongodb.net/?appName=Cluster0
 
 rapidapi:
   key: 2c7f8b9dd0msh4e3eafe659dd865p147ecejsn9c1f3b9c32df

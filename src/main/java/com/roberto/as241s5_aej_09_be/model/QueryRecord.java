@@ -5,8 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.relational.core.mapping.Column;
-import org.springframework.data.relational.core.mapping.Table;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 import java.time.LocalDateTime;
 
@@ -14,21 +14,21 @@ import java.time.LocalDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Table("query_record")
+@Document(collection = "query_record")
 public class QueryRecord {
 
     @Id
-    private Long id;
+    private String id;
 
-    @Column("api_source")
+    @Field("api_source")
     private String apiSource;
 
-    @Column("prompt")
+    @Field("prompt")
     private String prompt;
 
-    @Column("response")
+    @Field("response")
     private String response;
 
-    @Column("created_at")
+    @Field("created_at")
     private LocalDateTime createdAt;
 }
