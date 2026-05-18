@@ -31,4 +31,12 @@ public class QueryRecord {
 
     @Column("created_at")
     private LocalDateTime createdAt;
+
+    @Column("deleted")
+    @Builder.Default
+    private Boolean deleted = false;
+
+    @Column("updated_at")
+    private LocalDateTime updatedAt;    
+
 }
