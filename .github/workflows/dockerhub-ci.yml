@@ -36,5 +36,5 @@ jobs:
           file: ./dockerfile-roberto/Dockerfile   # Ruta exacta a tu carpeta personalizada
           push: true
           tags: |
-            robertoespinoza/as241s5_aej_##-be:latest
-            robertoespinoza/as241s5_aej_##-be:${{ github.sha }}
+            robertoespinoza/as241s5_aej_09-be:latest
+            robertoespinoza/as241s5_aej_09-be:${{ github.sha }}
