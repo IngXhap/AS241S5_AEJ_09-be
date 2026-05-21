@@ -29,7 +29,11 @@
 		<java.version>17</java.version>
 		<spring-cloud.version>2024.0.0</spring-cloud.version>
 		
-		<netty.version>4.1.133.Final</netty.version>     <postgresql.version>42.7.11</postgresql.version>   <bouncycastle.version>1.84</bouncycastle.version> <jackson.version>2.18.2</jackson.version>         </properties>
+		<netty.version>4.1.133.Final</netty.version>
+		<postgresql.version>42.7.11</postgresql.version>
+		<bouncycastle.version>1.84</bouncycastle.version>
+		<jackson.version>2.18.2</jackson.version>
+	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -41,7 +45,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-gateway-server-webflux</artifactId>
+			<artifactId>spring-cloud-starter-gateway</artifactId>
 		</dependency>
 
 		<dependency>
@@ -59,14 +63,10 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-r2dbc-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-validation-test</artifactId>
+			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
