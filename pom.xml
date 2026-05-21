@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>4.0.6</version>
+		<version>3.4.3</version>
 		<relativePath/> </parent>
 	<groupId>com.roberto</groupId>
 	<artifactId>as241s5-aej-09-be</artifactId>
@@ -27,11 +27,9 @@
 	</scm>
 	<properties>
 		<java.version>17</java.version>
-		<spring-cloud.version>2025.1.1</spring-cloud.version>
-		<postgresql.version>42.7.11</postgresql.version>
-		<bouncycastle.version>1.84</bouncycastle.version>
-		<netty.version>4.2.13.Final</netty.version>
-	</properties>
+		<spring-cloud.version>2024.0.0</spring-cloud.version>
+		
+		<netty.version>4.1.133.Final</netty.version>     <postgresql.version>42.7.11</postgresql.version>   <bouncycastle.version>1.84</bouncycastle.version> <jackson.version>2.18.2</jackson.version>         </properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -109,7 +107,7 @@
 				</configuration>
 			</plugin>
 			<plugin>
-				<groupId>org.apache.plugins</groupId>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<executions>
 					<execution>
