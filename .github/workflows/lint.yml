@@ -1,0 +1,30 @@
+name: Code Quality - Super-Linter
+
+on:
+  push:
+    branches:
+      - develop
+  pull_request:
+    branches:
+      - develop
+  workflow_dispatch:
+
+jobs:
+  super-linter:
+    name: Run Super-Linter
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Clonar el repositorio
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Necesario para que revise solo los archivos modificados
+
+      # 2. Ejecutar el súper validador automático
+      - name: Run GitHub Super-Linter
+        uses: super-linter/super-linter@v5
+        env:
+          VALIDATE_ALL_CODEBASE: false # Súper importante: solo revisa lo que tú cambies, no todo el proyecto
+          DEFAULT_BRANCH: develop
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub lo gestiona solo
