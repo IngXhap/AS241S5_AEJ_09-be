@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: roberto-espinoza-07-deployment
+  namespace: roberto-espinoza-07-namespace
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: roberto-espinoza-07-deployment
+  template:
+    metadata:
+      labels:
+        app: roberto-espinoza-07-deployment
+    spec:
+      containers:
+      - name: roberto-espinoza-07-container
+        image: robertoespinoza/iacontroller:1.0   
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+        envFrom:
+        - secretRef:
+            name: roberto-espinoza-07-secret
