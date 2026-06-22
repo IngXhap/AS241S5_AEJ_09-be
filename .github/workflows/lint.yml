@@ -9,6 +9,10 @@ on:
       - test
   workflow_dispatch:
 
+permissions:
+  contents: read
+  statuses: write
+
 jobs:
   super-linter:
     name: Run Super-Linter
@@ -19,12 +23,12 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Necesario para que revise solo los archivos modificados
+          fetch-depth: 0 
 
       # 2. Ejecutar el súper validador automático
       - name: Run GitHub Super-Linter
         uses: super-linter/super-linter@v5
         env:
-          VALIDATE_ALL_CODEBASE: false # Súper importante: solo revisa lo que tú cambies, no todo el proyecto
-          DEFAULT_BRANCH: develop
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub lo gestiona solo
+          VALIDATE_ALL_CODEBASE: false 
+          DEFAULT_BRANCH: test # <-- Cambiado a test para que haga el match correcto con tu rama de pruebas
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
